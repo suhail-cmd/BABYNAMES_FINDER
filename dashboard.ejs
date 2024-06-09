@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard - Baby Names</title>
+    <link rel="stylesheet" href="/styles/dashboard.css">
+</head>
+<body>
+    <header>
+        <h1 class="title"><strong>Baby Names Finder</strong></h1>
+        <nav>
+            <ul>
+                <li><a href="/">Home</a></li>
+                <li><a href="/login.html">Login</a></li>
+                <li><a href="/signup.html">Sign Up</a></li>
+                <li><a href="/dashboard">Dashboard</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div class="image-container">
+        <img src="/images/G.jpg" alt="Baby Image 1" class="baby-image left" width="700" height="350">
+        <img src="/images/B.jpg" alt="Baby Image 2" class="baby-image right" width="700" height="350">
+    </div>
+    <center>
+        <section>
+            <marquee>Welcome to the Baby Names Finder, <%= username %>!</marquee>
+            <form id="babyNamesForm">
+                <label for="gender">Select Gender:</label>
+                <select id="gender" name="gender" required>
+                    <option value="boy">Boy</option>
+                    <option value="girl">Girl</option>
+                    <option value="neutral">Neutral</option>
+                </select>
+                <button type="submit">Search</button>
+            </form>
+            <ul id="babyNamesList">
+                <% if (babyNames.length > 0) { %>
+                    <% babyNames.forEach(function(name) { %>
+                        <li><%= name %></li>
+                    <% }); %>
+                <% } %>
+            </ul>
+        </section>
+    </center>
+    <footer>
+        <marquee>Find the perfect name for your baby!</marquee>
+        <p>&copy; 2024 Baby Names Finder</p>
+    </footer>
+
+    <script>
+        document.getElementById('babyNamesForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+            const gender = document.getElementById('gender').value;
+            fetchBabyNames(gender);
+        });
+
+        function fetchBabyNames(gender) {
+            fetch('/getBabyNames?gender=' + gender)
+                .then(response => response.json())
+                .then(data => {
+                    const babyNamesList = document.getElementById('babyNamesList');
+                    babyNamesList.innerHTML = '';
+                    data.babyNames.forEach(name => {
+                        const listItem = document.createElement('li');
+                        listItem.textContent = name;
+                        babyNamesList.appendChild(listItem);
+                    });
+                })
+                .catch(error => {
+                    console.error('Error fetching baby names data:', error);
+                });
+        }
+    </script>
+</body>
+</html>
