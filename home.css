@@ -1,0 +1,150 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0;
+}
+
+header {
+    background-color: #4CAF50;
+    color: white;
+    padding: 15px;
+    text-align: left;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header .logo img {
+    height: 50px;
+}
+
+header nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: flex-end;
+}
+
+header nav ul li {
+    margin: 0 15px;
+}
+
+header nav ul li a {
+    color: white;
+    text-decoration: none;
+    padding: 8px 16px;
+    background-color: #4CAF50;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+}
+
+header nav ul li a:hover {
+    background-color: #45a049;
+}
+
+.hero {
+    background: url('/images/bak.jpg') no-repeat center center/cover;
+    color: white;
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.hero-content {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.hero-logo {
+    width: 150px;
+}
+
+.hero h1 {
+    font-size: 36px;
+    margin: 20px 0;
+}
+
+.hero p {
+    font-size: 18px;
+    margin: 20px 0;
+}
+
+.hero .btn {
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    text-decoration: none;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+}
+
+.hero .btn:hover {
+    background-color: #45a049;
+}
+
+.container {
+    padding: 20px;
+}
+
+.about-names, .tips, .testimonials {
+    margin: 20px 0;
+}
+
+.about-names h2, .tips h2, .testimonials h2 {
+    color: #333;
+}
+
+.images-section {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.image-item {
+    width: 30%;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.image-item img {
+    max-width: 100%;
+    border-radius: 10px;
+}
+
+.image-item p {
+    margin-top: 10px;
+    font-size: 14px;
+}
+
+.tips ul {
+    list-style-type: disc;
+    margin: 20px 0;
+    padding-left: 20px;
+}
+
+.tips ul li {
+    margin: 10px 0;
+}
+
+.testimonials .testimonial {
+    background-color: #fff;
+    padding: 15px;
+    border-radius: 5px;
+    margin: 10px 0;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+footer {
+    background-color: #4CAF50;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    position: relative;
+    width: 100%;
+}
+
+footer marquee {
+    font-size: 14px;
+    margin-bottom: 5px;
+}
