@@ -1,0 +1,126 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #4CAF50;
+    color: white;
+    padding: 15px;
+    text-align: center;
+}
+
+header h1 {
+    display: inline;
+    margin: 0;
+    font-size: 24px;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    justify-content: flex-end;
+    margin: 0;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    padding: 8px 16px;
+    background-color: #4CAF50;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+}
+
+nav ul li a:hover {
+    background-color: #45a049;
+}
+
+.image-container {
+    display: flex;
+    justify-content: space-between;
+    margin: 20px;
+}
+
+.baby-image {
+    max-width: 200px;
+}
+
+.left {
+    float: left;
+}
+
+.right {
+    float: right;
+}
+
+.dashboard-container {
+    padding: 20px;
+    text-align: center;
+}
+
+.dashboard-container marquee {
+    font-size: 20px;
+    color: #333;
+}
+
+form {
+    margin: 20px 0;
+}
+
+form label {
+    display: block;
+    margin-bottom: 8px;
+}
+
+form select {
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+form button {
+    padding: 10px 15px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+form button:hover {
+    background-color: #45a049;
+}
+
+ul#babyNamesList {
+    list-style-type: none;
+    padding: 0;
+}
+
+ul#babyNamesList li {
+    padding: 5px;
+    border-bottom: 1px solid #ccc;
+}
+
+footer {
+    background-color: #4CAF50;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+}
+
+footer marquee {
+    font-size: 14px;
+}
